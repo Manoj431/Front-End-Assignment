@@ -1,0 +1,194 @@
+<html>
+    <head>
+        <style>
+		.hero-image {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("anime.jpg");
+			height: 50%;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: relative;
+		}
+		.hero-text {
+			text-align: center;
+			font-size:40px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+}
+		
+        table{
+            border:2px solid lime;
+			width:500px;
+            height:400px;
+        }
+        th,td {
+            border: 1px solid black;
+        }
+          
+        * {
+			box-sizing: border-box;
+		}
+
+		.row {
+			
+			display: flex;
+			margin-left:-5px;
+			margin-right:-5px;
+		}
+
+		.column {
+			padding:50px;
+		}
+		.a {
+			list-style-type: square;
+		}
+
+		.b {
+			list-style-type: upper-roman;
+		}
+		li{
+			color:red;
+			font-size:40px;
+			font-family:"Bradley Hand ITC";
+		}
+		
+		.grid-container {
+			display: grid;
+			grid-template-columns: auto auto auto;
+			background-color: #2196F3;
+			padding: 10px;
+		}
+
+		.grid-item {
+			background-color: rgba(255, 255, 255, 0.8);
+			border: 1px solid rgba(0, 0, 0, 0.8);
+			padding: 20px;
+			font-size: 30px;
+			text-align: center;
+		}
+		.item1{
+			grid-column: 1 / span 3;
+		}
+		
+        </style>
+    </head>
+
+    <body>
+	<div class="hero-image">
+        <div class="hero-text"><u>TABLES </u></div>
+	</div>
+        <div class="row">
+		<div class="column">
+            <table style="table-layout:fixed;">
+                <tr>
+                    <th>NAME</th>
+                    <th>Anime</th>
+                    <th>Manga</th>
+                </tr>
+                <tr>
+                    <td>Manoj Barik</td>
+                    <td>Kengan Ashura</td>
+                    <td>Solo Leveling</td>
+                </tr>
+                <tr>
+                    <td>Abinash Sen </td>
+                    <td>Naruto</td>
+                    <td>God of High School</td>
+                </tr>
+                <tr>
+                    <td>Aniket Chaubey</td>
+                    <td>Baki</td>
+                    <td>God of Tower</td>
+                </tr>
+            </table>
+        </div>
+        
+		<div class="column">
+            <table style="table-layout:auto;">
+                <tr>
+                    <th>NAME</th>
+                    <th>Anime</th>
+                    <th>Manga</th>
+                </tr>
+                <tr>
+                    <td>Manoj Barik</td>
+                    <td>Kengan Ashura</td>
+                    <td>Solo Leveling</td>
+                </tr>
+                <tr>
+                    <td>Abinash Sen </td>
+                    <td>Naruto</td>
+                    <td>God of High School</td>
+                </tr>
+                <tr>
+                    <td>Aniket Chaubey</td>
+                    <td>Baki</td>
+                    <td>God of Tower</td>
+                </tr>
+            </table>
+        </div>
+    </div>  
+
+	<div align="center"><h1><u>Dfferent Types of Guns. </u></h1></div>	
+	<ul class="a"> 
+		<li><h2><u>Assault Rifles</u></h2></li>
+			<ol class="b">
+				<li>AK-47</li>
+				<li>Groza</li>
+				<li>Scar-L</li>
+				<li>M4-16</li>
+				<li>Bizon</li>		
+			</ol>
+		<li><h2><u>Sniper Rifles</u></h2></li>
+			<ol class="b">
+				<li>Arctic Warfare (L96A1)</li>
+				<li>Dragunov rifle</li>
+				<li>KSVK 12.7</li>
+				<li>The Intervention</li>
+				<li>Alejandro Sniper Rifle</li>		
+			</ol>
+	</ul> 
+	
+	<div class="grid-container">
+		<div class="item1"><h1 align="center">Companies Name</h1></div>
+		<div class="grid-item"> <a href="https://www.ibm.com/in-en" target="_blank"> IBM </a> </div>
+		<div class="grid-item"> <a href="https://www.tcs.com" target="_blank"> TCS </a> </div>  
+		<div class="grid-item"> <a href="https://jalatechnologies.com/" target="_blank"> JALA Tech. </a></div>
+		<div class="grid-item"> <a href="https://www.wipro.com/" target="_blank"> Wipro </a> </div>
+		<div class="grid-item"> <a href="https://www.cognizant.com/" target="_blank"> Cognizant </a> </div>
+		<div class="grid-item"> <a href="https://www.microsoft.com/en-in" target="_blank"> Microsoft </a> </div>
+	</div >
+		
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

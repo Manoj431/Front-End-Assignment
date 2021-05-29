@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>Input Attributes</title>
+		  <header>
+            <font align="center" face="Algerian" size="6" color="Green">
+            <h1><u>User Details </u> </h1>
+            </font>
+        </header>
+    </head>
+	<marquee behavior="scroll" direction="left" scrollamount="18">
+    <h2>Enter all the details asked below with appropriate values.</h2>
+	</marquee>
+	
+    <body>
+		<form>
+		
+        <table align="center" cellpadding="10">
+		
+        <font face="Arial" size="5">
+            <tr>
+                <td>Enter your first name:</td>
+                <td> 
+                    <input type="text" id="name" name="Name"
+                    placeholder="First Name" required> 
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter your last name:</td>
+                <td> 
+                    <input type="text" id="name" name="Name"
+                    placeholder="Last Name" required> 
+                </td>
+            </tr>
+			
+			<tr>
+                <td> Enter your Date of Birth : </td>
+                <td>
+                      <input type="date" id="name" name="DOB" required>
+
+              </td>
+            </tr>
+
+            <tr>
+                <td> Select your Gender: </td>
+                <td>
+                      <input type="radio" id="male" name="male">
+                      <label for="male"> Male </label><br>
+
+                      <input type="radio" id="female" name="female">
+                      <label for="female"> Female </label><br>
+              </td>
+            </tr>
+
+            <tr>
+                <td>Enter your mobile number:</td>
+                <td>
+                    <input pattern="[0-9]{10}" title="Please enter numbers only. Upto 10 digits."
+					id="mobile" name="mobile number" >
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter your E-mail ID:</td>
+                <td>
+                    <input type="email" id="mail" name="mail" placeholder="E-mail id" size="20" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Enter the Password:</td>
+                <td> 
+                    <input type="password" id="psd" name="pass"
+                    placeholder="Password" required> 
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter the time:</td>
+                <td>
+                    <input type="time" id="appt" name="time">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter the month:</td>
+                <td>
+                    <input type="month" id="month" name="month">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter the week:</td>
+                <td>
+                    <input type="week" id="week" name="week">
+                </td>
+            </tr>
+			
+			<tr>
+                <td>Country:</td>
+                <td>
+                    <input type="text" id="txt"  value="INDIA" readonly>
+                </td>
+            </tr>
+			
+			<tr>
+                <td>Continent:</td>
+                <td>
+                    <input type="text" id="txt"  value="ASIA" disabled>
+                </td>
+            </tr>
+			
+			 <tr>
+                <td>Choose your favourite Color:</td>
+                <td>
+                    <input type="color" id="col" name="col">
+                </td>
+            </tr>
+			
+			<tr>
+                <td>Choose Your Technical Skills and rate yourself:</td>
+                <td>
+                    <input type="checkbox" id="sk1" name="skill">
+                    <label for="sk1">Python</label>
+                    <div style="float:right;" class="range-wrap">
+                        <input type="range" class="range" min="1" max="6">
+                        <output class="bubble"></output>
+                      </div>
+                      <br>                
+                </td>
+				<td>
+					<input type="checkbox" id="sk2" name="skill">
+                    <label for="sk2">HTML</label>
+                    <div style="float:right;" class="range-wrap">
+                        <input type="range" class="range" min="1" max="5">
+                        <output class="bubble"></output>
+                    </div>
+				</td>
+				
+				<tr>
+					<td></td>
+					<td>
+					<input type="checkbox" id="sk4" name="skill">
+                    <label for="sk4">Javascript</label>
+                    <div style="float:right;" class="range-wrap">
+                        <input type="range" class="range" min="1" max="5">
+                        <output class="bubble"></output>
+                    </div>
+					</td>
+					
+					<td>
+					<input type="checkbox" id="sk3" name="skill">
+                    <label for="sk3">CSS</label>
+                    <div style="float:right;" class="range-wrap">
+                        <input type="range" class="range" min="1" max="5">
+                        <output class="bubble"></output>
+                    </div>
+					</td>
+				</tr>
+				
+            </tr>
+			
+			<tr>
+                <td>
+                    <input type="submit" value="Submit"><br><br>
+				</td>
+				<td>
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+			
+        </font>    
+        </table>
+		</form>
+		<h1>Glimpse of Another Page</h1>
+		<iframe style="background-color:lightblue; height:300px;width:100%;" name="Iframe" title="Iframe demo"></iframe>
+		<a href="file:///C:/Users/Manoj/Desktop/Solutions/Html/Html1.html" target="Iframe" alt="Html1 page">Want to visit an ANIME page. Click on this </a>
+		
+		<br>
+		<br>
+		
+		
+    </body>
+
+</html>

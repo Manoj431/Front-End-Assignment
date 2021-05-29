@@ -1,0 +1,39 @@
+<html>
+<head>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        h1{
+            color:lawngreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+        }
+        p{
+            font-size:30px;
+            font-family: Algerian;
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Different ways of <u>Accessing</u>.</h1>
+	
+    <p id="name1"></p>
+    <p id="name2"></p>
+
+    <script>
+        var person = {firstname:"Manoj", lastname:"Barik"};
+        var txt="The name of person is  "
+        var x;
+        for(x in person){
+            txt += person[x] + " ";
+        }
+        document.getElementById("name1").innerHTML = txt;
+
+        //Another way to print
+        document.getElementById("name2").innerHTML = "The name of person is " + person.firstname + " " + person.lastname; 
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title> JavaScript Validation </title>
+    <style>
+        * {
+            padding-right:20px;
+            padding-left: 20px;
+            background-color:lightpink;
+        }
+        h1{
+            padding-left:40%;
+            font-size:40px;
+            
+        }
+        td{
+            font-size:30px;
+        }
+        input{
+            height:35px;
+        }
+        p{
+            font-size:35px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1> <u> Employee Details</u> </h1>
+    </div>
+
+    <div >
+        <form name = "employee" onsubmit = "return(validate());">
+         <table>
+            
+            <tr >
+               <td align = "right">Name : </td>
+               <td><input type = "text" id = "Name" /></td>
+            </tr>
+            
+            <tr> </tr>
+            <tr></tr>
+            <tr> </tr>
+            <tr>
+               <td align = "right">EMail :</td>
+               <td><input type = "text" id = "EMail" /></td>
+            </tr>
+            
+            <tr> </tr>
+            <tr></tr>
+            <tr> </tr>
+            
+            <tr>
+               <td align = "right">Country :</td>
+               <td>
+                  <select id = "Country" style="height:35px">
+                     <option value = "-1" selected>choose country</option>
+                     <option value = "1">INDIA</option>
+                     <option value = "2">JAPAN</option>
+                     <option value = "3">USA</option>
+                     <option value = "4">UK</option>
+                  </select>
+               </td>
+            </tr>
+            
+            <tr>
+               <td align = "right"></td>
+               <td><input type = "submit" value = "Submit" /></td>
+            </tr>
+            
+         </table>
+
+         <p id="display"></p>
+      </form>  
+          
+    </div>
+
+    <div>
+        <article style="font-size:35px; font-family:Algerian,Arial;"> <u> JSON Objects and Accessing </u></article>
+        <p id="display2"></p>
+    </div>
+   
+
+</body>
+<script>
+    function validate() {
+		var name = document.employee.Name.value;
+		var mail = document.employee.EMail.value;
+		atpos = mail.indexOf("@");
+        dotpos = mail.lastIndexOf(".");
+		
+         if( name == "" || mail == "" ) {
+            alert( "Fill all the boxes....." );
+            return false;
+         }         
+         
+         if (atpos < 1 || ( dotpos - atpos < 2 )) {
+            alert("Please enter correct email ID")
+            return false;
+         }    
+        alert("Successfully saved");
+    }
+
+    //JSON object and accessing....
+    var emp = {"name2":"Manoj Barik", "email2":"barikm80@gmail.com" , "country2":"INDIA" };
+    var ename = emp.name2;
+    var e_email = emp.email2;
+    var ecoun = emp.country2;
+
+    document.getElementById("display2").innerHTML = "The employee " + ename +" is from "+ecoun + " , has e-mail ID " + e_email;
+
+</script>
+</html>

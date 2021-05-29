@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Event-Listener and Cookie</title>
+    <style>
+        * {
+            padding-right:20px;
+            padding-left: 20px;
+            background-image:url("paper.jpg");
+        }
+        p{
+            font-size:35px;
+            font-style:italic;
+            color:lawngreen;
+        }
+        button{    
+            align:center;
+            height:60px;
+            width:auto;
+            background_color:gray;
+            border:2px solid red;
+        }
+        .bttn{
+            position:relative;
+            left: 80px;
+            top:10px;
+        }
+
+    </style>
+</head>
+
+<body onload="checkCookie()">
+    <div>
+        <h1><u> Button showing curent Date and Time </u> </h1>
+        <button class="bttn" id="btn">Date-Time </button>
+        <p id="display"></p>
+    </div>
+</body>
+
+<script>
+    var d_t = new Date();
+    document.getElementById("btn").addEventListener("click", function() {
+        document.getElementById("display").innerHTML = d_t
+    });
+
+    // Cookie program...
+    
+    function setCookie(cname,cvalue) {
+    document.cookie = cname + "=" + cvalue + ";" ;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+    return "";
+    }
+
+    function checkCookie() {
+        var user=getCookie("username");
+        if (user != "") {
+            alert("Welcome again " + user);
+        } else {
+            user = prompt("Please enter your name:","");
+            if (user != "" && user != null) {
+            setCookie("username", user);
+            }
+        }
+    }
+</script>
+</html>

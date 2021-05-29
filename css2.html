@@ -1,0 +1,154 @@
+<html>
+<head>
+  <title>Designing page</title>
+  <style>
+  
+	p.d1 {display: none;}
+	p.d2 {display: inline; color:red;}
+	p.d3 {display: block; color:blue;}
+	p.d4 {display: inline-block; color:orange;}
+	
+	.edit{
+		font-family:"Bradley Hand ITC", "Berlin Sans FB",Algerian;
+		font-size:50px;
+		color:green;
+	}
+	
+	table{
+		
+		border:3px solid ;
+		width:100%;
+		height:400px;
+	}
+	
+	th {background-color: rgb(231, 231, 231);}
+	
+	td {
+		border-bottom: 1px solid rgb(214, 214, 214);
+		border-top: 1px solid rgb(214, 214, 214);
+		border-right: 1px solid rgb(214, 214, 214);
+			
+		}
+
+	table tr:hover td {
+		border-bottom: 2px solid red;
+		border-top: 2px solid red;
+	}
+	.dis-list {
+		display: list-item;
+		list-style-position: inside;
+	}
+	.arrow{
+		position:absolute;
+		top:230%;
+		right:150px;
+	}
+	.fas{
+		font-size:40px;
+		color:#787676;
+		padding:10px 20px;
+		background:white;
+		border-raius:50%;
+		transition:0.6s;
+	}
+	.fas:active{
+		background:#fff;
+		color:#000;
+		transform:scale(1.05);
+	}
+	.bimg1{
+		background-image:url("image1.jpg");
+		background-size:100% ;
+		background-repeat:no repeat;
+	}
+	.bimg2{
+		background-image:url("car.jpg");
+		background-size:100% ;
+		background-repeat:no repeat;
+	}
+	.box {
+		width: 100%;
+		height: cover;
+		margin: 15px 20px 20px;
+		padding: 50px 20px 20px;
+		border-width: 20px 10px 10px;
+	}
+	.f1 {
+	  position: absolute;
+	  right: 0;
+	  width: 200px;
+	  height:30px;
+	  border: 3px solid blue;
+	} 
+	
+  </style>
+</head>
+
+
+<body>
+	<div class="f1">
+		<a name="top" position="right"></a>
+		<a href="#bottom"><font align="center">Back to bottom of page</font></a>
+	</div>
+	<div class="box">
+	
+	<table>
+
+
+	  <tr>
+		<th>NAME</th>
+		<th>CITY</th>
+		<th>STATE</th>
+
+	  </tr>
+	  <tr>
+		<td align="center">Manoj Kumar Barik</td>
+		<td align="center">Balasore</td>
+		<td align="center">Odisha</td>
+	  </tr>
+	  <tr>
+		<td align="center">Abinash Sen</td>
+		<td align="center">Bhubaneshwar</td>
+		<td align="center">Odisha</td>
+	  </tr>
+	  <tr>
+		<td align="center">Aniket Chaubey</td>
+		<td align="center">Marathahalli</td>
+		<td align="center">Karnataka</td>
+	  </tr>
+	  
+	</table>
+	<br> <br>
+		<div class="edit">
+		<div class="bimg1">
+			<p class="d3" ><u> Employee-1</u></p>
+			 The name of first employee is <p class="d4"> Manoj Kumar Barik.</p><br>
+			 He is from <p class="d2"> Balasore</p> city of <p class="d2"> Odisha.</p>
+		</div>	 
+		<br><br>
+		
+		
+		<h2><u> Employee-2</u></h2>
+		
+		<div class="dis-list">The name of Second employee is <p class="d4"> Abinash Sen.</p><br></div>
+		<div class="dis-list">	
+			He is from  <p class="d2"> Bhubaneshwar</p> city of <p class="d2"> Odisha.</p>
+		</div>
+		
+		<div class="bimg2">
+			<h2>Employee-3</h2>
+			 The name of first employee is <p class="d4">Aniket Kumar Chaubey.</p><br>
+			 He is from <p class="d2"> Marathahalli</p> city , <p class="d2"> Karnataka.</p>
+			
+		</div>
+		</div>	
+		<div class="f1">
+			<a href="#top">Back to top of page</a>
+			<a name="bottom"></a>
+		</div>
+	</div>
+	
+	
+
+</body>
+</html>

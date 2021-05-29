@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <style>
+            * {
+            padding-right:20px;
+            padding-left: 20px;
+            background-image:url("paper.jpg");
+            }
+
+            .hd{
+                text-align: right;
+                font-size: 20px;
+                padding-right: 20px;
+                padding-top:20px;
+                float:right;
+            }
+
+            img{
+                padding-top:10px;
+            }
+            
+            body{
+                box-sizing: border-box;
+            }
+
+            button {
+                padding: 20px;
+                background: transparent;
+                text-shadow: 1px 1px 1px #202020;
+                font-family: "Lato", sans-serif;
+                font-size: 18pt;
+                border: 1px solid lightblue;
+                color: lightblue;
+            }
+            p{
+                font-size:25px;
+            }
+        </style>
+    </head>
+<body>
+    <div>
+	<img src="https://www.brickzrealtors.com/images/thumbs/0000089_Untitled-2.jpeg" alt="Brickzrealtors logo" >
+    <div style="float:right;" >
+    <br>
+        <button onclick="this.style.display='none'" > Click to disapper this</button>
+    </div>
+	   <div class="hd" id="hd">
+        Log In    
+		</div>
+	</div>
+    <hr>
+    <div>
+        <h1> <u> Using call() </u> </h1>
+        <p id="para1"></p>
+        
+    </div>
+    <div >
+        <h1> <u> Using apply() </u> </h1>
+        <p id="para2"></p>
+    </div>
+
+    <div>
+        <h1> <u> Adding properties using Prototype </u> </h1>
+        <p id="prototype1"></p>
+    </div>
+
+    <div>
+        <h1><u>JavaScript Getters and Setters</u></h1>
+        <p> Creating counters:</p>
+        <p id="counters"></p>
+
+    </div>
+
+    <div>
+        <h1>Did you like it? </h1>
+        <button id="click1">Like </button>
+        <button id="click2">Dislike</button>
+        <p id="disp"></p> 
+        
+    </div>
+     
+</body>
+<script> 
+    var person = {
+    fullName: function(city) {
+        return this.firstName + " " + this.lastName +" is from " + city + " and the nationality is " + this.nationality +"." ;
+    }
+    }
+    var person1 = {
+    firstName:"Manoj",
+    lastName: "Barik",
+    nationality:"Indian"
+    };
+
+    var person2 = {
+    firstName:"Abinash",
+    lastName: "Sen",
+    nationality:"Indian"
+    };
+
+    var x = person.fullName.call(person1,"Balasore"); 
+    document.getElementById("para1").innerHTML = x; 
+
+        
+    var y = person.fullName.apply(person2,["Bhubaneswar"]); 
+    document.getElementById("para2").innerHTML = y;  
+
+    
+    //Prototype....
+
+    function person3(firstname,lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+    }
+
+    person3.prototype.nationality = "Indian";
+    var p3 = new person3("Aniket", "Chaubey");
+    document.getElementById("prototype1").innerHTML = "The name is " + p3.firstname + " " + p3.lastname + " and nationality is " + p3.nationality + ".";
+
+
+    // Counter-Javascript........
+
+    var button1 = document.getElementById("click1");
+    button1.onclick =  function() {
+        document.getElementById("disp").innerHTML = "Thank you.";
+		console.log("When Like button is clicked this anonymous function is called and 'Thank You' is printed on web page.")
+    };
+
+    var button2 = document.getElementById("click2");
+    button2.onclick =  function() {
+        document.getElementById("disp").innerHTML = "We will try to improve. " ;
+		console.log("When DisLike button is clicked this anonymous function is called and 'We will try to improve' is printed on web page.")
+    };
+
+
+    //Getter and Setter counter....
+            
+    // Define an object
+            var obj = {counter : 0};
+
+            // Define Setters and Getters
+            Object.defineProperty(obj, "reset", {
+            get : function () {this.counter = 0;}
+            });
+
+            Object.defineProperty(obj, "increment", {
+            get : function () {this.counter++;}
+            });
+
+            Object.defineProperty(obj, "decrement", {
+            get : function () {this.counter--;}
+            });
+
+            Object.defineProperty(obj, "add", {
+            set : function (value) {this.counter += value;}
+            });
+
+            Object.defineProperty(obj, "subtract", {
+            set : function (value) {this.counter -= value;}
+            });
+
+            // Play with counter:
+            obj.reset;
+            obj.add = 7;
+            obj.subtract = 2;
+            obj.increment;
+            obj.decrement;
+            document.getElementById("counters").innerHTML = obj.counter;
+
+</script>
+
+</html>
